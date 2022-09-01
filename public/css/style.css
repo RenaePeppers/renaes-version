@@ -2,14 +2,24 @@
 
 /* importing "Dancing Script", "Luckiest Guy", and "Roboto" fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Luckiest+Guy&family=Roboto&display=swap');
+/* ****************************** */
 
-
+/* ****************************** */
+/* This section is Leon's original style.css */
+ h1{
+    color: red; 
+} 
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+.not{
+    text-decoration: underline;
+}
+/* ****************************** */
 
 /* ************************* */
-
-
-/* the following section is general formatting */
-
+/* this section is general formatting */
 :root {
       --primary-color: rgb(1,25,54);
       --secondary-color: rgb(70,83,98);
@@ -18,57 +28,47 @@
       --teal-color: rgb(130, 163, 161);
       --green-color: rgb(159, 196, 144);
     }
-    
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     }
-
 .container {
     max-width: 1400px; 
     margin: 0;
     overflow:visible;
     padding: 0px;
     }
-
 body {
     font-family: 'Roboto', sans-serif;
     color: rgb(27, 24, 24);
     line-height: 1.5;
     }
-
 ul {
     list-style-type: none;
     }
-
 a {
     text-decoration: none;
     color: rgb(27, 24, 24)
     }
-
 h1 {
     font-weight: 300;
     line-height: 1.2;
     margin: 10px 0;
     }
-
 h2 {
     font-weight: 200;
     line-height: 1.2;
     margin: 10px 0;
     }    
-
 p {
     margin: 10px 0;
     font-family:'Roboto', sans-serif;
     font-size: 1.2rem;
     }
-
-
-
-    
-/* header */
+/* ****************************** */
+/* ****************************** */   
+/* header section */
 .header {
     background-color: var(--dark-color);
     color:#b4becb;
@@ -86,12 +86,10 @@ p {
     justify-content:center;
     overflow: visible;
     }
-
      /*the next lines assign tags to grid-template-areas*/
     .header-pic {    grid-area: header-pic;}
     .header-h2 {    grid-area: header-h2;}
     .header-h1{    grid-area: header-h1;}
-
 .header-pic {
     width: auto;
     margin: 25px 40px;
@@ -99,7 +97,6 @@ p {
     align-self: center; /*centers vertically*/
     justify-self: right; /*keeps it on right side of grid*/
     }   
- 
 .header-h2 {
     font-family: 'Dancing Script', cursive, sans-serif;
     color: var(--green-color);
@@ -114,10 +111,10 @@ p {
     margin: 0px 5px 10px 5px;
     font-size: 3.5rem;
   /*  border:red solid 10px; */
-
 }
-
-
+/* ****************************** */
+/* ****************************** */   
+/* footer section */
 .footer {
     background-color: var(--dark-color);
     color:#b4becb;
@@ -131,13 +128,13 @@ p {
     overflow: visible;
     }
 .footer-p {
+    color: var(--green-color);
     align-self: center;
     grid-column: 1;
     grid-row: 1;
 /*     border:yellow solid 10px;  */
     text-align: center;
 }
-
 .footer-pic {
     width: auto;
     margin: 25px 40px;
@@ -147,8 +144,9 @@ p {
     grid-column:2;
     grid-row: 1;
     }   
- 
-
+/* ****************************** */
+/* ****************************** */   
+/* mainBody section */
 .mainBody {
     background: url(../images/eggs-medium.jpg) no-repeat center fixed; 
     min-height: 600px;
@@ -156,10 +154,19 @@ p {
     background-color: var(--dark-color);
     border-top: solid 25px var(--dark-color);
 }
+.mainBody a, h1 { 
+    font-size: 3rem;
+    color:white;
+    margin-left:25px;
+}
+.mainBody a:hover {
+        border-bottom: 2px #fff solid;
+      }
 
 
-
-
+/* ****************************** */
+/* ****************************** */   
+/* Media Query section */
   /* Mobile */
   @media (max-width: 500px) {
     .container {
@@ -177,7 +184,7 @@ p {
      margin: auto;
      padding:5px;
      width: 100%;
-     background-color: rgb(46, 133, 46);
+     background-color:var(--dark-color);
      text-align: center;
      }
      .header-pic {
@@ -207,16 +214,3 @@ p {
 
 
 
-
-
-/* 
-/* h1{
-    color: red; 
-} */
-.completed{
-    text-decoration: line-through;
-    color: gray;
-}
-.not{
-    text-decoration: underline;
-}
